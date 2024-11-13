@@ -1,0 +1,79 @@
+POST http://localhost:4000/upload HTTP/1.1
+content-type: application/json
+
+{
+  "jsonData": {
+    "users": [
+      {"test": "123"}
+    ]
+  },
+  "fileName": "UserHashKeypair.json",
+}
+
+
+
+###
+POST http://localhost:4000/create-new-userfile HTTP/1.1
+content-type: application/json
+
+{
+    "publickey":"11",
+    "username":"nio",
+    "email":"abc@gmail.com",
+    "address":"abcde"
+}
+###
+POST http://localhost:4000/add-user HTTP/1.1
+content-type: application/json
+
+{
+    "publickey":"11",
+    "useraccountid": "110"
+}
+###
+POST http://localhost:4000/updatekeypairfile HTTP/1.1
+content-type: application/json
+
+{
+  "filename": "UserKeypair",
+  "users": [
+    {
+      "test": "123"
+    },
+    {
+      "publickey": "20",
+      "useraccountid": "200"
+    },
+    {
+      "publickey": "10",
+      "useraccountid": "100"
+    },
+    {
+      "publickey": "11",
+      "useraccountid": "110"
+    }
+  ]
+}
+###
+POST http://localhost:4000/check-user HTTP/1.1
+content-type: application/json
+
+{
+    "publickey":"8ktpmrv3naBB9HbagfQBQRtkLiCaCkLnGSjezQikssSC"
+}
+###
+POST http://localhost:4000/getuserbykey HTTP/1.1
+content-type: application/json
+
+{
+    "publickey":"8ktpmrv3naBB9HbagfQBQRtkLiCaCkLnGSjezQikssSC"
+}
+
+
+
+###
+
+GET http://localhost:4000/get/bafkreicztid5xexmradjd5h76pof4r27tddz6dz2qmldbyvwd4gor7hpya HTTP/1.1
+###
+
+GET http://localhost:4000/testconnection HTTP/1.1
